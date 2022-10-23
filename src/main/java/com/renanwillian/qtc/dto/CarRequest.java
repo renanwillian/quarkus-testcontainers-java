@@ -13,6 +13,14 @@ public class CarRequest implements Serializable {
     private String model;
     private Integer year;
 
+    public CarRequest() {}
+
+    public CarRequest(String make, String model, Integer year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+
     public Car toDomain() {
         Car car = new Car();
         car.setMake(make);
